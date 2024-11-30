@@ -1,0 +1,25 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Login Form</title>  
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="login.js">
+    </script>
+</head>  
+<body>
+    <button class="button-89" onclick="location.href='index.html'">Go Back</button>
+    <div class="box">  
+        <form id="createAccountForm" onsubmit="createAccount(event)">
+        <center>
+            <label for="uname"><b>User name: </b></label>  
+            <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+      
+            <label for="psw"><b>Password: </b></label>  
+            <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+            
+            <button class="button-62" type="submit">Create Account</button><br><br>
+        </center>
+    </form>
+</body>  
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Information</title>
+  <style>
+    body {
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      margin: 50px;
+      padding: 20px;
+      background-image:url('img/veg.jpg');
+      color: #333;
+      border: 5px dashed black;
+      border-radius: 10px;
+      width: 400px;
+      height: 400px;
+      top: 10%;/*50*/
+    left: 30%;
+    position: absolute;
+      
+    }
+    h1 {
+      color: #2c3e50;
+      background-color:paleturquoise;
+    }
+    .info {
+        width: 300px;
+        height: 230px;
+      padding: 45px;
+      background-color:palegreen;
+      border: 5px double black ;
+      border-radius: 10px;
+    }
+    .info p {
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <center><h1>Food Information</h1></center>
+  <div class="info">
+    <p><strong>Type of food:</strong> <span id="type"></span></p>
+    <p><strong>Code:</strong> <span id="code"></span></p>
+    <p><strong>Food Name:</strong> <span id="name"></span></p>
+    <p><strong>Varieties:</strong> <span id="varr"></span></p>
+    <p><strong>Product Origin:</strong> <span id="ori"></span></p>
+  </div>
+
+  <script>
+    // Function to read query parameters
+    function getQueryParams() {
+      const params = new URLSearchParams(window.location.search);
+      return {
+        type: params.get('type'),
+        code: params.get('code'),
+        name: params.get('name'),
+        varr: params.get('varr'),
+        ori: params.get('ori')
+      };
+    }
+
+    // Populate the webpage with query parameters
+    const data = getQueryParams();
+    document.getElementById('type').innerText = data.type || 'N/A';
+    document.getElementById('code').innerText = data.code || 'N/A';
+    document.getElementById('name').innerText = data.name || 'N/A';
+    document.getElementById('varr').innerText = data.varr || 'N/A';
+    document.getElementById('ori').innerText = data.ori || 'N/A';
+  </script><br>
+  <footer>@Final Year Project</footer>
+</body>
+</html>

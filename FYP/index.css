@@ -1,0 +1,129 @@
+body{
+    background-image:url('img/veg.jpg');
+}
+.container {
+    display: flex;
+}
+h2{
+    background-color:darkslategray;
+    color:#fff;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.a {
+    padding: 10px;
+    background-color:rgb(199, 245, 199);
+    margin: 30px;
+    width: 350px;
+    height: 350px;
+    font-size:larger;
+    text-align: center;
+}
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #9bfeaa;
+  border-radius: 2px;
+  border-width: 0;
+  box-shadow: rgba(116, 82, 191, 0.4) 0 2px 4px,rgba(209, 197, 235, 0.759) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+  #fish {
+          width: 400px; /* 固定寬度 */
+          height: 350px; /* 固定高度 */
+          background-image: url('img/fish.png');
+          background-size: 400px 330px; /* 圖片佔外框的四分之一 */
+          background-position: bottom;
+          border: none;
+          cursor: pointer;
+          display: inline-block;
+          text-decoration: none;
+          background-repeat: no-repeat;
+          border: 3px dashed rgb(126, 71, 19);
+          color: black; /* Text color */
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  #meat {
+      width: 400px; /* 固定寬度 */
+          height: 350px; /* 固定高度 */
+          background-image: url('img/meat.png');
+          background-size: 400px 330px; /* 圖片佔外框的四分之一 */
+          background-position: bottom;
+          border: none;
+          cursor: pointer;
+          display: inline-block;
+          text-decoration: none;
+          background-repeat: no-repeat;
+          border: 3px dashed rgb(126, 71, 19);
+          color: black; /* Text color */
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  #fruit {
+          width: 400px; /* 固定寬度 */
+          height: 350px; /* 固定高度 */
+          background-image: url('img/fruit.png');
+          background-size: 400px 330px; /* 圖片佔外框的四分之一 */
+          background-position: bottom;
+          border: none;
+          cursor: pointer;
+          display: inline-block;
+          text-decoration: none;
+          background-repeat: no-repeat;
+          border: 3px dashed rgb(126, 71, 19);
+          color: black; /* Text color */
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  #vegetable {
+         width: 400px; /* 固定寬度 */
+          height: 350px; /* 固定高度 */
+          background-image: url('img/veg.png');
+          background-size: 400px 330px; /* 圖片佔外框的四分之一 */
+          background-position: bottom;
+          border: none;
+          cursor: pointer;
+          display: inline-block;
+          text-decoration: none;
+          background-repeat: no-repeat;
+          border: 3px dashed rgb(126, 71, 19);
+          color: black; /* Text color */
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

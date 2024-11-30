@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="generate.css">
+  <title>Meat Information</title>
+  <link rel="icon" href="img/icmeat.jpg" type="image/icon type">
+  <body>
+    <center><h1>All meeet information</h1></center>
+    <button class="button-89" onclick="history.back()">Go Back</button>
+    <div id="dataDisplay" class="box">
+     xxx
+    </div>
+
+    <script>
+ async function fetchMeatData() {
+      try {
+        // Fetch all data from the blockchain
+        const response = await fetch('http://localhost:8787/getBlockchainData');
+        const data = await response.json();
+
+        console.log('Fetched data:', data); // Debugging: Log the data
+
+        // Filter the data for entries where "type" is "meat"
+        const meatData = data.filter(entry => entry.type && entry.type.toLowerCase() === 'meat');
+
+        // Display the filtered data
+        const displayDiv = document.getElementById('dataDisplay');
+        displayDiv.innerHTML = ''; // Clear previous entries
+
+        if (meatData.length === 0) {
+          displayDiv.innerHTML = '<p>No meat data available.</p>'; // Handle empty data
+          return;
+        }
+
+        meatData.forEach(entry => {
+          // Generate a QR code pointing to display.html with query parameters
+          const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(
+  `http://192.168.0.151:5500/display.html?type=${entry.type}&code=${entry.code}&name=${entry.name}&varr=${entry.varr}&ori=${entry.ori}`
+)}`;
+
+          // Append the data and QR code to the display
+          displayDiv.innerHTML += `
+            <div class="entry">
+              <p><strong>Name:</strong> ${entry.name}</p>
+              <p><strong>Code:</strong> ${entry.code}</p>
+              <p><strong>Variant:</strong> ${entry.varr}</p>
+              <p><strong>Origin:</strong> ${entry.ori}</p>
+              <img src="${qrCodeUrl}" alt="QR Code">
+            </div>
+            <hr>
+          `;
+        });
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        const displayDiv = document.getElementById('dataDisplay');
+        displayDiv.innerHTML = '<p>Error fetching data. Please try again later.</p>';
+      }
+    }
+
+    // Fetch meat data every 6 seconds
+    setInterval(fetchMeatData, 6000);
+
+    // Fetch data once when the page loads
+    document.addEventListener('DOMContentLoaded', fetchMeatData);
+      </script>
+
+  </body>
+</html>

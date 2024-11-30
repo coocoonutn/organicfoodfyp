@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <script defer src="qrcode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+    <title>Organic Food Form</title>
+    <link rel="icon" href="img/qcode.png" type="image/icon type">
+</head>
+<body>
+    <button class="button-89" onclick="history.back()">Go Back</button>
+
+    <div class="box">
+        <center>
+            <h2>Organic Food Form</h2>
+            <form id="foodForm">
+                <label for="type">Type of food:</label>
+                <select name="type" id="type">
+                    <option value="meat">Meat</option>
+                    <option value="fruit">Fruit</option>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="fish">Fish</option>
+                </select><br><br>
+
+                <label for="code">Code number:</label><br>
+                <input type="text" id="code" name="code"><br>
+
+                <label for="name">Organic food name:</label><br>
+                <input type="text" id="name" name="name"><br>
+
+                <label for="varr">Varieties:</label><br>
+                <input type="text" id="varr" name="varr"><br>
+
+                <label for="ori">Origin:</label><br>
+                <input type="text" id="ori" name="ori"><br><br>
+
+                <button type="submit" class="button-24">Submit & Create QR code</button>
+            </form>
+        </center>
+    </div>
+
+    <div id="imgBox">
+        <center><img src="img/qcode.png" id="qrImage" alt="QR Code"></center>
+    </div>
+
+</body>
+</html>
